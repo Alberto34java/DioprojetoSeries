@@ -9,7 +9,35 @@ namespace controllers
 
         public void Processos()
         {
-
+            string opcao=LerOpcaoUsuario().ToUpper();
+            while (opcao.ToUpper() != "S")
+            {
+                switch (opcao)
+                {
+                    case "1":
+                    //LISTAGEM
+                        break;
+                    case "2":
+                    //BUSCA POR FILME
+                    break;
+                    case "3":
+                    //CADASTRAR NOVO FILME
+                    break;
+                    case "4":
+                    //ATUALIZAR CASO ERRO DE CADASTRO ,EXEMPLO NOME DIGITADO ERRADO
+                    break;
+                    case "5":
+                    //EXCLUSÃO DE FILMES 
+                    break;
+                    case "L":
+                    //LIMPAR A TELA 
+                    break;    
+                    default:
+                        throw new ArgumentOutOfRangeException();
+                }
+                
+                
+            }
         }
 
         private string LerOpcaoUsuario()
