@@ -10,4 +10,4 @@ de acesso a dados .
 Essa Classe não é o padrão Web Mvc será criada apenas para 
 Controlar as operações realizadas na Tela 
 Foi criado uma pasta ValueObjects para separar o arquivo de enum do projeto
-quew será utilizado dentro da classe de modelo do banco 
+que será utilizado dentro da classe de modelo do banco 
