@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using controllers;
+using Models;
 using ValueObjects;
 
 namespace digitalSeries_Projeto
@@ -21,6 +23,7 @@ namespace digitalSeries_Projeto
                 {
                     case "1":
                     //LISTAGEM
+                    ListarFilmes();
                         break;
                       
                     case "2":
@@ -57,6 +60,20 @@ namespace digitalSeries_Projeto
             {
                 
                 throw;
+            }
+        }
+
+        private static void ListarFilmes()
+        {
+            List<Filme> filmes=new List<Filme>();
+            var controle=new FilmeController();
+            filmes=controle.ListarFilmes();
+            foreach (var item in filmes)
+            {
+                 Console.WriteLine(item.Id + "||" +
+                      item.Nome + "||" + item.Genero + 
+                      "||" + item.Descricao + "||"
+                      + item.AnoLancamento);
             }
         }
 
@@ -108,7 +125,11 @@ namespace digitalSeries_Projeto
                       Console.WriteLine("Informe o Id?");
                      int id=Int32.Parse(Console.ReadLine());
                      var controller=new FilmeController();
-                     controller.BuscarFilme(id);
+                    var filme= controller.BuscarFilme(id);
+                    Console.WriteLine(filme.Id + "||" +
+                      filme.Nome + "||" + filme.Genero + 
+                      "||" + filme.Descricao + "||"
+                      + filme.AnoLancamento);
         }
         private static void Salvar()
         {
