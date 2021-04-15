@@ -41,6 +41,7 @@ namespace controllers
                     break;
                     case "L":
                     //LIMPAR A TELA 
+                    Console.Clear();
                     break;    
                     default:
                         throw new ArgumentOutOfRangeException();
