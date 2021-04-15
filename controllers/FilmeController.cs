@@ -51,7 +51,7 @@ namespace controllers
             }
         }
 
-        private void ExcluirFilme()
+        public void ExcluirFilme()
         {
             Console.WriteLine("Digite o Id do Filme:");
             int id=Int32.Parse(Console.ReadLine());
@@ -62,7 +62,7 @@ namespace controllers
             
         }
 
-        private string AtualizarFilme()
+        public string AtualizarFilme()
         {
               Filme filme;
                filme=null;
@@ -91,7 +91,7 @@ namespace controllers
                }
         }
 
-        private string SalvarFilme()
+        public string SalvarFilme()
         {
              string msg= "";
            try
@@ -131,7 +131,7 @@ namespace controllers
             return msg;
         }
 
-        private Filme BuscarFilme()
+        public Filme BuscarFilme()
         {
             try
             {
@@ -148,7 +148,7 @@ namespace controllers
             }
         }
 
-        private List<Filme> ListarFilmes()
+        public List<Filme> ListarFilmes()
         {
            try
            {
