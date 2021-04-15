@@ -51,12 +51,22 @@ namespace controllers
             }
         }
 
-        public void ExcluirFilme()
+        public bool ExcluirFilme()
         {
+            try
+            {
             Console.WriteLine("Digite o Id do Filme:");
             int id=Int32.Parse(Console.ReadLine());
             Filme model=repository.BuscarPorId(id);
             repository.ExcluirRegistro(id);
+            return true;
+            }
+            catch 
+            {
+                
+              return false;
+            }
+           
 
            
             
@@ -64,7 +74,7 @@ namespace controllers
 
         public string AtualizarFilme()
         {
-              Filme filme;
+               Filme filme;
                filme=null;
                Console.WriteLine("Digite o Id do Filme: ");
                int id=Int32.Parse(Console.ReadLine());
