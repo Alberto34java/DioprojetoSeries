@@ -6,6 +6,7 @@ namespace controllers
     public class FilmeController
     {
         private FilmeRepository repository = new FilmeRepository();
+        
 
         public void Processos()
         {
@@ -17,6 +18,7 @@ namespace controllers
                     case "1":
                     //LISTAGEM
                         break;
+                        //ListarFilmes();
                     case "2":
                     //BUSCA POR FILME
                     break;
